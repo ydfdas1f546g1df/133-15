@@ -1,0 +1,44 @@
+@import "base.less";
+
+body {
+  background: @background;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    a{
+        padding: 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+      background: darken(@background, 10%);
+      margin: 0.5rem;
+      padding: 1rem 1rem;
+
+      a {
+
+
+        color: @text-color;
+        text-decoration: none;
+
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
