@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "name": "Event1",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+        "admin"
+      ]
+    },
+    {
+      "name": "Event2",
+      "description": "Test",
+      "price": 150,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+        "user"
+      ]
+    }
+  ]
+}

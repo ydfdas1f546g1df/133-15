@@ -1,12 +1,23 @@
 <?php
+
 require_once "classes/user.php";
 require_once "lib/loadAdmins.php";
 /**
  * @var string[] $adminList
  */
-$userLoadPre = parse_ini_file("ini/users.ini", True);
-$userList = array_keys($userLoadPre);
-$userListObjects = [];
-foreach ($userList as $username => $user) {
-    $userListObjects[$user] = new user($username, $user['LastLogin'], in_array($username, $adminList), $user['LastIP'], $user['LastFalseLogin1'], $user['LastFalseLogin2'], $user['LastFalseLogin3']);
+
+$filePath = "json/users.json";
+$fileContent = file_get_contents($filePath);
+$jsonObject = json_decode($fileContent);
+
+//echo "<pre>";
+//print_r($jsonObject);
+//echo "</pre>";
+
+foreach ($jsonObject->users as $user) {
+    $userListObjects[$user->name] = new user($user->name, $user->LastLogin, in_array($user->name, $adminList), $user->LastIP);
 }
+
+//echo "<pre>";
+//print_r($userListObjects);
+//echo "</pre>";

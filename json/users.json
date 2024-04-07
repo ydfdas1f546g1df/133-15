@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "admin",
+      "password": "123456",
+      "LastLogin": 0,
+      "LastIP": ""
+    },
+    {
+      "name": "user",
+      "password": "654321",
+      "LastLogin": 0,
+      "LastIP": ""
+    }
+  ]
+}

@@ -31,21 +31,5 @@ class eventClass
         $this->Teilnehmer = $Teilnehmer;
     }
 
-    public function exportIniArray(): array
-    {
-        return [
-            'name' => $this->name,
-            'description' => $this->description,
-            'price' => $this->price,
-            'location' => $this->location,
-            'startdate' => $this->startdate,
-            'enddate' => $this->enddate,
-            'Type' => $this->Type,
-            'Capacity' => $this->Capacity,
-            'RegistrationDeadline' => $this->RegistrationDeadline,
-            'Organizer' => $this->Organizer,
-            'ContactInformation' => $this->ContactInfo,
-            'Teilnehmer' => $this->Teilnehmer,
-        ];
-    }
+
 }

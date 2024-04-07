@@ -20,18 +20,10 @@ if (in_array($_SESSION['user'], $events[$_POST['name']]->Teilnehmer)) {
         unset($events[$_POST['name']]->Teilnehmer[$key]);
         //echo 'true';
     }
-    $eventarray = [];
 
 
-    foreach ($events as $event) {
-        $eventarray[$event->name] = $event->exportIniArray();
-//        echo '<pre>';
-//        var_dump($event->exportIniArray());
-//        echo '</pre>';
-    }
 
-
-    write_php_ini($eventarray, 'ini/events.ini');
+    $events[$_POST['name']]->write();
 
     echo "You are now unregistered for this event";
 } else {

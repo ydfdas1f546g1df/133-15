@@ -30,26 +30,30 @@ require_once 'lib/loadAdmins.php';
         <?php endif; ?>
     </ul>
     <h2>Your Events</h2>
-    <ul class="yourevents">
-        <?php foreach ($events as $event): ?>
-            <?php if (in_array($_SESSION['user'], $event->Teilnehmer)): ?>
-                <li>
-                    <a href="event.php?name=<?= $event->name ?>">
-                        <h3><?= $event->name ?></h3>
-                        <div class="grid-container">
-                            <div class="grid-item">Location:</div>
-                            <div class="grid-item"><?= $event->location ?></div>
-                            <div class="grid-item">Start:</div>
-                            <div class="grid-item"><?= date('d.m.Y H:i', $event->startdate) ?></div>
-                            <div class="grid-item">End:</div>
-                            <div class="grid-item"><?= date('d.m.Y H:i', $event->enddate) ?></div>
-                            <div class="grid-item">Type:</div>
-                            <div class="grid-item"><?= $event->Type ?></div>
-                        </div>
-                    </a>
-                </li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </ul>
+    <?php if (empty($events[0])): ?>
+        <p>You have no events <a href="events.php">show Events</a> </p>
+    <?php else: ?>
+        <ul class="yourevents">
+            <?php foreach ($events as $event): ?>
+                <?php if (in_array($_SESSION['user'], $event->Teilnehmer)): ?>
+                    <li>
+                        <a href="event.php?name=<?= $event->name ?>">
+                            <h3><?= $event->name ?></h3>
+                            <div class="grid-container">
+                                <div class="grid-item">Location:</div>
+                                <div class="grid-item"><?= $event->location ?></div>
+                                <div class="grid-item">Start:</div>
+                                <div class="grid-item"><?= date('d.m.Y H:i', $event->startdate) ?></div>
+                                <div class="grid-item">End:</div>
+                                <div class="grid-item"><?= date('d.m.Y H:i', $event->enddate) ?></div>
+                                <div class="grid-item">Type:</div>
+                                <div class="grid-item"><?= $event->Type ?></div>
+                            </div>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
 </body>
 </html>

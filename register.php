@@ -15,17 +15,9 @@ if (!isset($_POST['name'])) {
 
 if (!in_array($_SESSION['user'], $events[$_POST['name']]->Teilnehmer)) {
     $events[$_POST['name']]->Teilnehmer[] = $_SESSION['user'];
-    $eventarray = [];
 
-    echo '<pre>';
-    var_dump($events);
-    echo '</pre>';
-    echo "<br/>";
+    $events[$_POST['name']]->write();
 
-    foreach ($events as $event) {
-        $eventarray[$event->name] = $event->exportIniArray();
-    }
-    write_php_ini($eventarray, 'ini/events.ini');
     echo "You are now registered for this event";
 } else {
     echo 'You are already registered for this event';
