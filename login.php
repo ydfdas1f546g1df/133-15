@@ -1,12 +1,11 @@
 <?php
 require_once "lib/errorCreater.php";
-echo "Bitte loggen Sie sich ein";
 if (isset($_POST['username']) && isset($_POST['password'])) {
     require_once "lib/loadUser.php";
     /**
      * @var user[] $userListObjects
      */
-    if ($userListObjects[$_POST['username']]['password'] == $_POST['password']) {
+    if ($userListObjects[$_POST['username']]->password == $_POST['password']) {
         session_start();
         $_SESSION['user'] = $_POST['username'];
         $IP = $_SERVER['REMOTE_ADDR'];
@@ -33,7 +32,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     }
 
 }
-echo "Bitte loggen Sie sich ein";
 ?>
 
 <!doctype html>

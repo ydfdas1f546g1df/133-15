@@ -1,0 +1,20 @@
+{
+  "name": "133-15",
+  "version": "1.0.0",
+  "description": "This is a PHP-based web application that provides a platform for users to register and login to access certain events. The application is built with PHP and uses INI files for data storage. The project also utilizes object-oriented programming with classes.",
+  "main": "none",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": ""
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "none",
+  "license": "ISC",
+  "dependencies": {
+    "less": "^4.2.0"
+  }
+}

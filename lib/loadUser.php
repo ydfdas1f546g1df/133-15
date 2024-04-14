@@ -15,7 +15,13 @@ $jsonObject = json_decode($fileContent);
 //echo "</pre>";
 
 foreach ($jsonObject->users as $user) {
-    $userListObjects[$user->name] = new user($user->name, $user->LastLogin, in_array($user->name, $adminList), $user->LastIP);
+    $userListObjects[$user->name] = new user(
+        $user->name,
+        $user->LastLogin,
+        in_array($user->name, $adminList),
+        $user->LastIP,
+        $user->password
+    );
 }
 
 //echo "<pre>";
