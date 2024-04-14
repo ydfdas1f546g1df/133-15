@@ -1,4 +1,5 @@
 <?php
+require_once "lib/errorCreater.php";
 /**
  * @var eventClass[] $events
  */

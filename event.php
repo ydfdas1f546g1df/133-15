@@ -1,4 +1,5 @@
 <?php
+require_once "lib/errorCreater.php";
 require_once "lib/sessionstart.php";
 require_once "lib/loadevents.php";
 

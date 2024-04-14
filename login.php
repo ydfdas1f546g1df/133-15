@@ -1,5 +1,6 @@
 <?php
-
+require_once "lib/errorCreater.php";
+echo "Bitte loggen Sie sich ein";
 if (isset($_POST['username']) && isset($_POST['password'])) {
     require_once "lib/loadUser.php";
     /**
@@ -8,8 +9,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($userListObjects[$_POST['username']]['password'] == $_POST['password']) {
         session_start();
         $_SESSION['user'] = $_POST['username'];
-//        $LastIP = $_SERVER['REMOTE_ADDR'];
-//        $Login = time();
+        $IP = $_SERVER['REMOTE_ADDR'];
+        $time = time();
+
         require_once "lib/loadUser.php";
         /**
          * @var user[] $userListObjects
@@ -18,16 +20,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 //        $userListObjects[$_POST['username']]->LastIP = $LastIP;
 //        $userListObjects[$_POST['username']]->LastFalseLogin1 = $userListObjects[$_POST['username']]->
 //        $userListObjects[$_POST['username']]->write();
+        echo "<p>Willkommen, " . $_POST['username'] . "!</p>" . "<br>" . "<a href='index.php'>Homepage</a>";
 
         header('location:' . ($_GET['redirect'] ?? 'index.php'));
+
     } else {
         echo "Login fehlgeschlagen";
         if(isset($_POST['username'])){
             $LastFalseLogin = time();
         }
+        die();
     }
-    die();
+
 }
+echo "Bitte loggen Sie sich ein";
 ?>
 
 <!doctype html>
