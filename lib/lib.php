@@ -3,33 +3,34 @@
 
 function write_php_ini($array, $file)
 {
-    $res = array();
-    foreach ($array as $key => $val) {
-        if (is_array($val)) {
-            $res[] = "[$key]";
-            foreach ($val as $skey => $sval) {
-                if (is_array($sval)) {
-                    foreach ($sval as $i => $v) {
-                        $res[] = "$skey"."[] = " . (is_numeric($v) ? $v : '"' . $v . '"');
-                    }
-                } else {
-                    $res[] = "$skey = " . (is_numeric($sval) ? $sval : '"' . $sval . '"');
-                }
-            }
-        } else {
-            echo gettype($key);
-            if (is_array($val)) {
-                echo 'is array';
-                foreach ($val as $skey => $sval) {
-                    $res[] = $skey . "[] = " . (is_numeric($sval) ? $sval : '"' . $sval . '"');
-                }
-            } else {
-                $res[] = "$key = " . (is_numeric($val) ? $val : '"' . $val . '"');
-            }
-        }
-    }
-
-    safefilerewrite($file, implode("\r\n", $res));
+    echo 'Deprecated: write_php_ini';
+//    $res = array();
+//    foreach ($array as $key => $val) {
+//        if (is_array($val)) {
+//            $res[] = "[$key]";
+//            foreach ($val as $skey => $sval) {
+//                if (is_array($sval)) {
+//                    foreach ($sval as $i => $v) {
+//                        $res[] = "$skey"."[] = " . (is_numeric($v) ? $v : '"' . $v . '"');
+//                    }
+//                } else {
+//                    $res[] = "$skey = " . (is_numeric($sval) ? $sval : '"' . $sval . '"');
+//                }
+//            }
+//        } else {
+//            echo gettype($key);
+//            if (is_array($val)) {
+//                echo 'is array';
+//                foreach ($val as $skey => $sval) {
+//                    $res[] = $skey . "[] = " . (is_numeric($sval) ? $sval : '"' . $sval . '"');
+//                }
+//            } else {
+//                $res[] = "$key = " . (is_numeric($val) ? $val : '"' . $val . '"');
+//            }
+//        }
+//    }
+//
+//    safefilerewrite($file, implode("\r\n", $res));
 }
 
 function safefilerewrite($fileName, $dataToSave)
@@ -53,4 +54,15 @@ function safefilerewrite($fileName, $dataToSave)
         fclose($fp);
     }
 
+}
+
+function checkPHPVersion($minVersion): void{
+    if (version_compare(PHP_VERSION, $minVersion, '<')) {
+        // Exit the script and display an error message
+        exit("Error: Your PHP version is " . PHP_VERSION . ". This application requires at least PHP version " . $minVersion . " or higher.\n");
+    }
+}
+
+function hashPw(string $password) : string{
+    return password_hash($password, PASSWORD_BCRYPT, ['cost' => 10]);
 }

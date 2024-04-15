@@ -2,6 +2,7 @@
 
 class eventClass
 {
+    public int $id;
     public string $name;
     public string $description;
     public float $price;
@@ -15,7 +16,16 @@ class eventClass
     public string $ContactInfo;
     public array $Teilnehmer;
 
-    public function __construct(string $name, string $description, float $price, string $location, int $startdate, int $enddate, string $Type, int $Capacity, int $RegistrationDeadline, string $Organizer, string $ContactInfo, array $Teilnehmer)
+    public function __construct(string $name,
+                                string $description,
+                                float $price, string
+                                $location, int $startdate,
+                                int $enddate, string $Type,
+                                int $Capacity, int $RegistrationDeadline,
+                                string $Organizer,
+                                string $ContactInfo,
+                                array $Teilnehmer,
+                                int $id)
     {
         $this->name = $name;
         $this->description = $description;
@@ -29,6 +39,7 @@ class eventClass
         $this->Organizer = $Organizer;
         $this->ContactInfo = $ContactInfo;
         $this->Teilnehmer = $Teilnehmer;
+        $this->id = $id;
     }
 
 

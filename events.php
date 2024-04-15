@@ -1,12 +1,11 @@
 <?php
 require_once "lib/errorCreater.php";
-/**
- * @var eventClass[] $events
- */
+
 require_once "lib/sessionstart.php";
-require_once 'lib/loadevents.php';
-
-
+//require_once 'lib/loadevents.php';
+require_once 'classes/eventListClass.php';
+//TODO: switch to new eventClassArray
+$events = new eventListClass();
 ?>
 <!doctype html>
 <html lang="de">
@@ -25,11 +24,18 @@ require_once 'lib/loadevents.php';
     <a href="logout.php">Logout</a>
     </header>
 <ul>
-    <?php foreach ($events as $event): ?>
+    <?php foreach ($events->eventClassList as $event): ?>
         <li>
-            <a href="event.php?name=<?= $event->name ?>">
+            <a href="event.php?id=<?= $event->id ?>">
 
                 <h3><?= $event->name ?></h3>
+                <?php
+                if (in_array($_SESSION['user'], $event->Teilnehmer)) {
+                    echo '<h4 style="color:green">Registered</h4>';
+                }else{
+                    echo '<h4 style="color:darkorange">Not registered</h4>';
+                }
+                ?>
                 <p><?= $event->description ?></p>
                 <p>Price: <?= $event->price ?> CHF</p>
                 <p>Location: <?= $event->location ?></p>

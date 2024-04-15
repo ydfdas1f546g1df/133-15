@@ -1,6 +1,7 @@
 {
   "events": [
     {
+      "id": 0,
       "name": "Event1",
       "description": "Test",
       "price": 100,
@@ -12,14 +13,13 @@
       "registrationDeadline": 1710323765,
       "organizer": "Test",
       "contact": "54615461",
-      "participants": [
-        "admin"
-      ]
+      "participants": []
     },
     {
+      "id": 1,
       "name": "Event2",
       "description": "Test",
-      "price": 150,
+      "price": 100,
       "location": "Berlin:",
       "startdate": 1710323765,
       "enddate": 1710323765,
@@ -29,7 +29,295 @@
       "organizer": "Test",
       "contact": "54615461",
       "participants": [
-        "user"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Event3",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Event4",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": []
+    },
+    {
+      "id": 4,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Event5",
+      "description": "Test",
+      "price": 100,
+      "location": "Berlin:",
+      "startdate": 1710323765,
+      "enddate": 1710323765,
+      "type": "Stadttour",
+      "capacity": 10,
+      "registrationDeadline": 1710323765,
+      "organizer": "Test",
+      "contact": "54615461",
+      "participants": [
       ]
     }
   ]

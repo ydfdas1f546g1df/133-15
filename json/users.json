@@ -1,16 +1,24 @@
 {
-  "users": [
-    {
-      "name": "admin",
-      "password": "123456",
-      "LastLogin": 0,
-      "LastIP": ""
-    },
-    {
-      "name": "user",
-      "password": "654321",
-      "LastLogin": 0,
-      "LastIP": ""
-    }
-  ]
+    "users": [
+        {
+            "id": 0,
+            "name": "admin",
+            "isAdmin": true,
+            "password": "$2y$10$Q8ZfQAa33jK2Nf4\/0mD8GeUaPyvFFwx0InAbXC7dKKK0h4USN6Izm",
+            "LastLogin": 1713204486,
+            "LastIP": "127.0.0.1",
+            "LastFalseLogin": [],
+            "isLocked": false
+        },
+        {
+            "id": 1,
+            "name": "user",
+            "isAdmin": false,
+            "password": "$2y$10$Q8ZfQAa33jK2Nf4\/0mD8GeUaPyvFFwx0InAbXC7dKKK0h4USN6Izm",
+            "LastLogin": 0,
+            "LastIP": "",
+            "LastFalseLogin": [],
+            "isLocked": false
+        }
+    ]
 }

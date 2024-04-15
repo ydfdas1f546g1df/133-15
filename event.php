@@ -1,14 +1,14 @@
 <?php
 require_once "lib/errorCreater.php";
 require_once "lib/sessionstart.php";
-require_once "lib/loadevents.php";
+//require_once "lib/loadevents.php";
+require_once 'classes/eventListClass.php';
 
-/**
- * @var eventClass[] $events
- */
+$events = new eventListClass();
 
-if (isset($_GET['name'])) {
-    $event = $events[$_GET['name']];
+
+if (isset($_GET['id'])) {
+    $event = $events->eventClassList[$_GET['id']];
 } else {
     header('Location: events.php');
     exit;
@@ -49,13 +49,13 @@ if (isset($_GET['name'])) {
         </div>
         <?php if ($event->Capacity - count($event->Teilnehmer) > 0 && !(in_array($_SESSION['user'], $event->Teilnehmer))): ?>
             <form action="register.php" method="post">
-                <input type="hidden" name="name" value="<?= $event->name ?>">
+                <input type="hidden" name="id" value="<?= $event->id ?>">
                 <input type="submit" value="Register">
             </form>
         <?php endif; ?>
         <?php if (in_array($_SESSION['user'], $event->Teilnehmer)): ?>
-            <form action="unregister.php" method="post">
-                <input type="hidden" name="name" value="<?= $event->name ?>">
+            <form action="unregisterx.php" method="post">
+                <input type="hidden" name="id" value="<?= $event->id ?>">
                 <input type="submit" value="Unregister">
             </form>
         <?php endif; ?>

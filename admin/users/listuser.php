@@ -1,15 +1,12 @@
 <?php
 require_once "lib/errorCreater.php";
 require_once 'lib/sessionstart.php';
-require_once 'lib/loadUser.php';
-require_once 'lib/loadAdmins.php';
-require_once 'lib/loadevents.php';
+require_once 'classes/eventListClass.php';
+require_once 'classes/userListClass.php';
 
-/**
- * @var string[] $adminList
- * @var string[] $userList
- * @var eventClass[] $events
- */
+$events = new eventListClass();
+$users = new userListClass();
+
 
 ?>
 <!doctype html>
@@ -23,22 +20,23 @@ require_once 'lib/loadevents.php';
 </head>
 <body>
     <header>
-        <a href="index.php">Back to index</a>
+        <a href="../../index.php">Back to index</a>
         <h1>Manage User</h1>
-        <a href="logout.php">Logout</a>
+        <a href="../../logout.php">Logout</a>
+        <a href="adduser.php">Add User</a>
     </header>
     <main>
         <h2>User List</h2>
         <ul>
-            <?php foreach ($userList as $user): ?>
-                <li>
-                    <p><?= $user ?><br/> <a href="deleteUser.php">Delete</a><br/><a href="adminToggle.php">Admin
+            <?php foreach ($users->userClassList as $user): ?>
+                <li id="<?= $user->id ?>">
+                    <p><?= $user->name ?><br/> <a href="deleteUser.php?id=<?= $user->id ?>">Delete</a><br/><a href="adminToggle.php?id=<?= $user->id ?>">Admin
                             Toggle</a></p>
-                    <?php if (in_array($user, $adminList)): ?>
+                    <?php if ($user->isAdmin): ?>
                         <p>Is Admin</p>
                     <?php endif; ?>
                     <p>Registered Events:</p>
-                    <?php foreach ($events as $event): ?>
+                    <?php foreach ($events->eventClassList as $event): ?>
                         <?php if (in_array($_SESSION['user'], $event->Teilnehmer)): ?>
                             <p><?= $event->name ?></p>
                         <?php endif; ?>
@@ -46,7 +44,7 @@ require_once 'lib/loadevents.php';
                 </li>
             <?php endforeach; ?>
         </ul>
-        <a href="adduser.php">Add User</a>
+
     </main>
 </body>
 </html>

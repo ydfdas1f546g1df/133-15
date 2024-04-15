@@ -1,23 +1,22 @@
 <?php
 require_once "lib/errorCreater.php";
 require_once "lib/sessionstart.php";
-require_once 'lib/loadevents.php';
+//require_once 'lib/loadevents.php';
 require_once 'lib/lib.php';
+require_once 'classes/eventListClass.php';
 
-/**
- * @var eventClass[] $events
- */
+$events = new eventListClass();
 
-if (!isset($_POST['name'])) {
+if (!isset($_POST['id'])) {
     header('Location: events.php');
     exit;
 }
 
 
-if (!in_array($_SESSION['user'], $events[$_POST['name']]->Teilnehmer)) {
-    $events[$_POST['name']]->Teilnehmer[] = $_SESSION['user'];
+if (!in_array($_SESSION['user'], $events->eventClassList[$_POST['id']]->Teilnehmer)) {
+    $events->eventClassList[$_POST['id']]->Teilnehmer[] = $_SESSION['user'];
 
-    $events[$_POST['name']]->write();
+    $events->write();
 
     echo "You are now registered for this event";
 } else {
@@ -26,6 +25,7 @@ if (!in_array($_SESSION['user'], $events[$_POST['name']]->Teilnehmer)) {
 }
 echo '<br>';
 echo '<a href="events.php">Back to events</a>';
+header('location:events.php');
 
 
 

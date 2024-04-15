@@ -1,23 +1,103 @@
-@import "base.less";
-body{
+@import "base.less"; // This imports your base variables and mixins
+
+body {
   display: flex;
-    align-items: center;
-    flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  header{
+  margin: 0;
+  font-family: Arial, sans-serif; // Or any other base font you prefer
+  background: @background-color; // Define this variable in base.less
+  color: @text-color; // Define this variable in base.less
+
+  header {
     width: 100%;
+    padding: 1rem 0;
+    background: darken(@header-bg, 20%); // Assuming @header-bg is defined in base.less
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: darken(@background, 20%);
-    a{
+    margin-bottom: 2rem;
+
+    a {
+      color: @link-color; // Define this variable in base.less
       padding: 1rem;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: @link-color;
+      }
+    }
+
+    h1 {
+      color: @primary-color; // Define this variable in base.less
     }
   }
-  main{
-    .grid-container{
+
+  main {
+    max-width: 800px; // Limiting the width of the main content
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 2px 5px @shadow-color; // Define this variable in base.less
+    border-radius: 8px;
+    background: @content-bg; // Define this variable in base.less
+
+    p {
+      line-height: 1.6;
+    }
+
+    .grid-container {
       display: grid;
-        grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .grid-item {
+        margin-bottom: 0.5rem;
+
+        &:nth-child(odd) {
+          font-weight: bold;
+          text-align: right;
+        }
+
+        &:nth-child(even) {
+          text-align: left;
+        }
+      }
+    }
+
+    form {
+      margin-top: 2rem;
+
+      input[type="submit"] {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: @text-color;
+        background: @btn-bg; // Define this variable in base.less
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken(@btn-bg, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+
+    .grid-item {
+      &:nth-child(odd) {
+        text-align: left;
+        font-weight: normal;
+      }
     }
   }
 }

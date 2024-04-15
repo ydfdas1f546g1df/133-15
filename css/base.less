@@ -1,9 +1,69 @@
-@background: white;
-@text-color: black;
-@primary-color: #3498db;  // A nice blue
-@secondary-color: #2c3e50;  // A deep grey-blue
-@accent-color: #e74c3c;  // Bright red for accents
+// Color palette
+@background-color: #f8f9fa; // A soft grey background
+@text-color: #333; // Dark grey text for better readability
+@primary-color: #0083ff; // A vibrant blue
+@secondary-color: #868c91; // A muted grey
+@accent-color: #28a745; // Bright green for accents
+@btn-bg: #17a2b8; // A darker blue for buttons
+@shadow-color: darken(@background-color, 3); // A shadow color based on the background
+@content-bg: darken(@background-color, 10); // A light background for content
+@link-color: lighten(@text-color, 10); // A light link color
+@header-bg: darken(@background-color, 10); // A darker background for the header
+* {
+  box-sizing: border-box;
+}
+
+// Base element styles
 html, body {
   padding: 0;
   margin: 0;
+  background: @background-color;
+  color: @text-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+// Global defaults
+a {
+  color: @primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: darken(@primary-color, 10%);
+  }
+}
+
+// Button styling
+button {
+  background: @accent-color;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: darken(@accent-color, 10%);
+  }
+}
+
+// Responsive grids and media queries
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 }

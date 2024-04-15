@@ -1,26 +1,134 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   padding: 0;
   margin: 0;
+  background: #f8f9fa;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+a {
+  color: #0083ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0069cc;
+}
+button {
+  background: #28a745;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #1e7e34;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.column {
+  flex: 1;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .column {
+    flex-basis: 100%;
+  }
 }
 body {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
 }
 body header {
   width: 100%;
+  padding: 1rem 0;
+  background: #9fadba;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #cccccc;
+  margin-bottom: 2rem;
 }
 body header a {
+  color: #4d4d4d;
   padding: 1rem;
+  text-decoration: none;
+}
+body header a:hover {
+  text-decoration: underline;
+  color: #4d4d4d;
+}
+body header h1 {
+  color: #0083ff;
+}
+body main {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 2px 5px #eff1f4;
+  border-radius: 8px;
+  background: #dae0e5;
+}
+body main p {
+  line-height: 1.6;
 }
 body main .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+body main .grid-container .grid-item {
+  margin-bottom: 0.5rem;
+}
+body main .grid-container .grid-item:nth-child(odd) {
+  font-weight: bold;
+  text-align: right;
+}
+body main .grid-container .grid-item:nth-child(even) {
+  text-align: left;
+}
+body main form {
+  margin-top: 2rem;
+}
+body main form input[type="submit"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #333;
+  background: #17a2b8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+body main form input[type="submit"]:hover {
+  background-color: #117a8b;
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .grid-container .grid-item:nth-child(odd) {
+    text-align: left;
+    font-weight: normal;
+  }
 }
 /*# sourceMappingURL=event.css.map */

@@ -1,82 +1,106 @@
-@import "base.less";  // Assuming base styles and variables like @text-color and @background are defined here.
+@import "base.less"; // Importing base styles which include color definitions and basic body styles
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: @background-color;
+  color: @text-color;
+
   header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    background: @secondary-color;
+    color: white;
 
     a {
-      padding: 1rem;  // Padding around links
-      text-decoration: none;  // No underline on links
-      color: inherit;  // Inherits color from parent elements
+      color: white;
+      padding: 0 15px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     h1 {
-      font-size: 3rem;
-      margin: 2rem 1rem;  // Top and bottom margin as 2rem, left and right as 1rem
-      font-weight: bold;
+      margin: 0;
+      font-size: 24px;
     }
   }
 
-  h2 {
-    font-size: 2rem;
-    margin-top: 20px;  // Adds space above the h2 heading
-  }
+  .mainn {
+    display: flex;
+    justify-content: center;
+    .main {
+      ul {
+        list-style-type: none;
+        padding: 0;
 
-  ul {
-    list-style: none;  // Removes bullet points from list items
-    padding: 0;  // Removes padding
-    margin: 0 0 20px;  // Adds margin at the bottom
+        li {
+          a {
+            color: @primary-color;
+            text-decoration: none;
 
-    li {
-      margin-bottom: 10px;  // Space between list items
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
 
-      a {
-        text-decoration: none;  // No underline on links
-        color: darken(@text-color, 10%);  // Darkens the text color slightly for links
+      h2 {
+        font-size: 20px;
+        color: @text-color;
+      }
 
-        &:hover {
-          text-decoration: underline;  // Underlines links on hover
+      .yourevents {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+        padding: 10px;
+        background: lighten(@background-color, 10%);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+        li {
+          background: @background-color;
+          padding: 10px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken(@background-color, 5%);
+          }
+
+          a {
+            display: block;
+            color: inherit;
+          }
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-gap: 5px;
+
+          .grid-item {
+            &:nth-child(odd) {
+              text-align: right;
+              padding-right: 10px;
+            }
+
+            &:nth-child(even) {
+              text-align: left;
+              padding-left: 10px;
+            }
+          }
         }
       }
     }
   }
 
-  .yourevents {
-    width: 30%;
-    margin-left: 5%;
-    padding: 1rem;
-    background: darken(@background, 10%);  // Darkens the background color slightly
-    color: @text-color;
-    border-radius: 0.5rem;
-
-    li {
-      a {
-        display: block;  // Makes the link fill the li for better clickability
-        color: inherit;  // Inherits color from .yourevents
-        text-decoration: none;  // No underline
-
-        &:hover {
-          background-color: lighten(@background, 5%);  // Lightens the background on hover
-        }
-      }
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);  // Two equal columns
-      gap: 10px;  // Space between grid items
-      color: @text-color;
-
-      .grid-item {
-        padding: 2px 5px;  // Padding inside each grid item for spacing
-      }
-    }
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    color: @text-color;
-  }
 }

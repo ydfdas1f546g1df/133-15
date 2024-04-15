@@ -1,0 +1,56 @@
+@import 'admin.less';
+
+main {
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      background-color: lighten(@background-color, 5%); // Assuming @primary-bg is defined in base or admin
+      border-bottom: 1px solid darken(@background-color, 5%);
+      padding: 20px;
+      margin-bottom: 10px;
+
+      ul {
+        li {
+          width: 20%;
+            display: inline-block;
+          border-width: 1px;
+          border-color: @primary-color;
+            border-style: solid;
+          background-color: @background-color; // Assuming @primary-bg is defined in base or admin
+        }
+      }
+
+      h3, h4 {
+        color: darken(@primary-color, 10%); // Assuming @primary-color is defined in base or admin
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: @link-color; // Assuming @link-color is defined in base or admin
+        &:hover {
+          text-decoration: underline;
+          color: darken(@link-color, 10%);
+        }
+
+        button {
+          background-color: @content-bg; // Assuming @button-bg is defined in base or admin
+          color: @text-color; // Assuming @button-text is defined in base or admin
+          border: none;
+          padding: 10px 15px;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(@content-bg, 10%);
+          }
+        }
+      }
+    }
+  }
+}
