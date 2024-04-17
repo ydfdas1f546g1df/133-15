@@ -1,0 +1,23 @@
+@import "settingsManage";
+
+.maindata {
+  li {
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 5px;
+
+      .grid-item {
+        &:nth-child(odd) {
+          text-align: left;
+          padding-right: 10px;
+        }
+
+        &:nth-child(even) {
+          text-align: right;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

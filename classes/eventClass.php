@@ -18,14 +18,18 @@ class eventClass
 
     public function __construct(string $name,
                                 string $description,
-                                float $price, string
-                                $location, int $startdate,
-                                int $enddate, string $Type,
-                                int $Capacity, int $RegistrationDeadline,
+                                float $price,
+                                string $location,
+                                int $startdate,
+                                int $enddate,
+                                string $Type,
+                                int $Capacity,
+                                int $RegistrationDeadline,
                                 string $Organizer,
                                 string $ContactInfo,
                                 array $Teilnehmer,
-                                int $id)
+                                int $id
+    )
     {
         $this->name = $name;
         $this->description = $description;

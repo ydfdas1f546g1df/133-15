@@ -27,6 +27,9 @@ $users = new userListClass();
     </header>
     <main>
         <h2>Event List</h2>
+        <button onClick="event.preventDefault();console.log('Form submission prevented. Redirecting now.');window.location.href = './modify.php?id=new';">
+            NEW EVENT
+        </button>
         <ul>
             <?php foreach ($events->eventClassList as $event): ?>
 
