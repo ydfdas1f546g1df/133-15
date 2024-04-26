@@ -3,9 +3,9 @@
         {
             "id": 0,
             "name": "admin",
-            "isAdmin": true,
+            "isAdmin": false,
             "password": "$2y$10$Q8ZfQAa33jK2Nf4\/0mD8GeUaPyvFFwx0InAbXC7dKKK0h4USN6Izm",
-            "LastLogin": 1713204486,
+            "LastLogin": 1714165035,
             "LastIP": "127.0.0.1",
             "LastFalseLogin": [],
             "isLocked": false

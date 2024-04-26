@@ -1,0 +1,24 @@
+@import "../base";
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @content-bg;
+
+  a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+main{
+  form{
+    display: flex;
+    flex-direction: column;
+    label{
+      margin-top: 1rem;
+    }
+    input[type="button"]{
+      margin-top: 1rem;
+    }
+  }
+}

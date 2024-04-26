@@ -1,0 +1,30 @@
+@import "base";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @content-bg;
+
+  a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+main {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      background-color: @content-bg;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 0.25rem;
+    }
+  }
+
+}

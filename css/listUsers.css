@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+a {
+  color: #0083ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0069cc;
+}
+button {
+  background: #28a745;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #1e7e34;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.column {
+  flex: 1;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .column {
+    flex-basis: 100%;
+  }
+}
+.centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dae0e5;
+}
+header a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+main ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main ul li {
+  list-style: none;
+  background-color: #dae0e5;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+/*# sourceMappingURL=listUsers.css.map */

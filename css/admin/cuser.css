@@ -55,60 +55,21 @@ button:hover {
 header {
   display: flex;
   justify-content: space-between;
-  background: #dae0e5;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  align-items: center;
+  background-color: #dae0e5;
 }
 header a {
-  color: #4d4d4d;
-  text-decoration: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-header a:hover {
-  text-decoration: underline;
-}
-header h1 {
-  color: #0083ff;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+main form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
 }
-ul li {
-  background: #d4dae1;
-  margin: 0.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px #cbd3da;
-  width: calc(27% - 1rem);
-  transition: transform 0.3s, box-shadow 0.3s;
+main form label {
+  margin-top: 1rem;
 }
-ul li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px #cbd3da;
+main form input[type="button"] {
+  margin-top: 1rem;
 }
-ul li a {
-  color: inherit;
-  text-decoration: none;
-}
-ul li a:hover {
-  color: #3b3b3b;
-}
-ul li h3 {
-  margin-top: 0;
-}
-ul li p {
-  margin: 0.5rem 0;
-}
-@media (max-width: 768px) {
-  ul {
-    flex-direction: column;
-  }
-  ul li {
-    width: auto;
-  }
-}
-/*# sourceMappingURL=events.css.map */
+/*# sourceMappingURL=cuser.css.map */

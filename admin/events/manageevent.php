@@ -33,7 +33,7 @@ $users = new userListClass();
         <ul>
             <?php foreach ($events->eventClassList as $event): ?>
 
-                <li>
+                <li id="<?= $event->id ?>">
                     <h3><?= $event->name ?></h3>
                     <a href="modify.php?id=<?= $event->id ?>">
                         <button>Modify</button>
@@ -45,6 +45,7 @@ $users = new userListClass();
                     <h4>Registered Users:</h4>
                     <ul>
                         <?php foreach ($users->userClassList as $user): ?>
+
                             <?php if (in_array($user->id, $event->Teilnehmer)): ?>
                                 <li>
                                     <a href="../users/listuser.php#<?= $user->id ?>"><?= $user->name ?></a>
